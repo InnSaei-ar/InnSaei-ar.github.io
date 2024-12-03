@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creadores</title>
+    <link rel="stylesheet" href="CSS/computer.css" />
+    <link rel="stylesheet" href="CSS/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo-container">
+        <img
+          id="logo-desktop"
+          src="Imagenes/logo_grande.png"
+          alt="Logo computadora"
+        />
+        <img
+          id="logo-mobile"
+          src="Imagenes/logo_chico.png"
+          alt="Logo celular"
+        />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#quees">¿Que somos?</a></li>
+          <li><a href="index.html#porque">¿Por qué InnSaei?</a></li>
+          <li><a href="index.html#orientacion">Orientación</a></li>
+          <li><a href="index.html#capacitacion">Capacitación</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="titulos-creador">
+        <h1 class="creador-h1">Creadores de la página</h1>
+      </div>
+      
+      <div class="creadores-container">
+          <div class="creador creador-1">
+              <img src="./Imagenes/chiquitin.jpg" alt="Creador 1" class="foto-creador">
+              <h2>Matías Rasmussen</h2>
+              <p></p>
+          </div>
+          <div class="creador creador-2">
+              <img src="./Imagenes/joaco.png" alt="Creador 2" class="foto-creador">
+              <h2>Joaquín Figueroa</h2>
+              <p></p>
+          </div>
+      </div>
+      <br>
+
+      <button class="menu-btn">☰</button>
+
+      <div class="sidebar">
+        <button class="close-btn">×</button>
+        <ul class="sidebar-menu">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#quees">¿Que somos?</a></li>
+          <li><a href="index.html#porque">¿Por qué InnSaei?</a></li>
+          <li><a href="index.html#orientacion">Orientación</a></li>
+          <li><a href="index.html#capacitacion">Capacitación</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="fila-footer" id="contacto">
+        <div class="columna1-footer">
+          <h2>Información de contacto</h2>
+          <h4>martin.perez.millan@gmail.com</h4>
+          <h4>(+54) 261 573 3501</h4>
+          <h4><a href="creadores.html">Creadores de la web</a></h4>
+        </div>
+        <div class="columna2-footer">
+          <p>© 2024 - InnSaei - Todos los derechos reservados</p>
+        </div>
+        <div class="columna1-footer">
+          <h2>Redes sociales</h2>
+          <div class="redes-sociales">
+            <a href=""><img src="./Imagenes/facebook.png" alt="" class="img-footer" /></a>
+            <a href=""><img src="./Imagenes/instagram.png" alt="" class="img-footer" /></a>
+            <a href=""><img src="./Imagenes/Linkedin.png" alt="" class="img-footer" /></a>
+            <a href=""><img src="./Imagenes/whatsap.png" alt="" class="img-footer" /></a>
+            <a href=""><img src="./Imagenes/twitter.png" alt="" class="img-footer" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const menuBtn = document.querySelector(".menu-btn");
+      sidebar.classList.toggle("active");
+      menuBtn.classList.toggle("hidden");
+    }
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        const headerOffset = 200; 
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      });
+    });
+  </script>
+</html>

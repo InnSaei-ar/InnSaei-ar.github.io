@@ -1,0 +1,683 @@
+@font-face {
+  font-family: "Kabrio";
+  src: url("/Fuentes/Kabrio-Regular-trial.ttf"); 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #183949;
+  color: white;
+  padding: 20px 20px; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: height 0.3s ease, padding 0.3s ease;
+  height: 100px; 
+  font-size: 16pt;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo-desktop {
+  height: 70px;
+  transition: height 0.3s ease;
+}
+
+#logo-mobile {
+  display: none;
+}
+
+.site-name {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.navbar {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+.header-small {
+  padding: 10px 20px;
+  height: 70px;
+}
+
+.header-small #logo-desktop {
+  height: 40px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #183949;
+  transition: right 0.3s ease-out;
+  padding-top: 60px;
+  z-index: 1001;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px; 
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px; 
+  background-color: #183949;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+}
+
+
+/* Cont Principal */
+main {
+  margin-top: 6rem;
+  text-align: justify;
+}
+
+
+/* Seccion 1 */
+.principio {
+  position: relative; 
+  top: 0; 
+  width: 100%; 
+  height: calc(100vh - 40px); 
+  overflow: hidden; 
+  background-image: url("../Imagenes/fondoEduRed.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-color: transparent;
+}
+
+.principio .container {
+  position: absolute; 
+  z-index: 1;
+  top: 50%;
+  left: 50%; 
+  transform: translate(
+    -50%,
+    -50%
+  ); 
+  text-align: center; 
+}
+
+.principio .container h1,
+.principio .container button {
+  display: block; 
+  margin: 0 auto; 
+}
+
+.principio h1{
+  font-family: "Kabrio";
+  color: white;
+}
+
+.principio .container h1 {
+  margin-bottom: 20px; 
+  font-size: 52pt;
+}
+
+.principio .container button {
+  cursor: pointer;
+  border: none;
+  font-family: "Raleway";
+  font-size: 12pt;
+  color: rgb(255, 255, 255);
+  padding: 12px 30px;
+  transition: 3000ms;
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 3px;
+  background: linear-gradient(
+    0deg,
+    rgb(204, 153, 90) 0%,
+    rgb(229, 177, 116) 100%
+  );
+}
+
+
+/* Seccion 2 */
+
+.container-quees {
+  display: block;
+  text-align: center;
+  margin: 2rem 12.5rem 2rem 12.5rem;
+}
+
+.container-quees h2{
+  font-family: "Kabrio", 'Times New Roman', Times, serif;
+  font-size: 32pt;
+}
+
+.container-quees p {
+  font-family: "Raleway", 'Times New Roman', Times, serif;
+  font-size: 18pt;
+  margin-bottom: 20px;
+}
+
+/* Sección quien soy y por qué */
+
+.seccionquiensoyporque {
+  position: relative; 
+  top: 0;
+  width: 100%; 
+  height: 180%; 
+  overflow: hidden; 
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Imagenes/fondo_innsaei.png');
+  background-color: transparent;
+  background-position: top;
+  background-size: cover;
+  color: white;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.seccionquiensoyporque h2 {
+  font-family: "Kabrio", 'Times New Roman', Times, serif;
+  font-size: 32pt;
+}
+
+/* Sección quien soy */
+
+#quiensoy h2 {
+  text-align: center;
+}
+
+#quiensoy {
+  text-align: justify;
+  margin: 3rem 50% 0 5rem;
+  font-size: 16pt;
+}
+
+/* Sección por qué */
+
+#porque {
+  display: grid;
+  grid-template-columns: 30% 70%; 
+  margin: 5rem 7rem 3rem 30%;
+  justify-content: center;
+  gap: 4rem;
+}
+
+#porque h2 {
+  text-align: center;
+  grid-column: 1;
+  align-self: center;
+}
+
+#porque p {
+  grid-column: 2; 
+  font-size: 16pt;
+}
+
+/* Sección acompañamiento y orientación */
+#logoacompañamiento {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.bloque1-1 {
+  grid-column: 1; /* Primera columna */
+  grid-row: 1; /* Primera fila */
+  background-color: #cc995a;
+  padding: 1rem 1rem 5rem 2rem;
+  color: white;
+  height: 100%;
+  text-align: left;
+}
+
+.bloque1-2 {
+  grid-column: 2; /* Segunda columna */
+  grid-row: 1; /* Primera fila */
+  height: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../Imagenes/imagen1.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 1rem;
+}
+
+.bloque2-1 {
+  grid-column: 2; /* Segunda columna */
+  grid-row: 2; /* Segunda fila */
+  background-color: #cc995a;
+  padding: 1rem 2rem 5rem 1rem;
+  color: white;
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.bloque2-2 {
+  grid-column: 1; /* Segunda columna */
+  grid-row: 2; /* Primera fila */
+  height: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("../Imagenes/imagen2.jpg");
+  object-fit: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1rem;
+  padding-bottom: 10rem;
+}
+
+.bloque3-1 {
+  grid-column: 1; /* Primera columna */
+  grid-row: 3; /* Primera fila */
+  background-color: #cc995a;
+  padding: 1rem 1rem 1rem 2rem;
+  color: white;
+  margin-top: 2rem;
+  height: 100%;
+  text-align: left;
+}
+
+.bloque3-2 {
+  grid-column: 2; /* Segunda columna */
+  grid-row: 3; /* Primera fila */
+  height: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("../Imagenes/imagen3.jpg");
+  object-fit: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.grid h2 {
+  font-size: 22pt;
+}
+
+
+.grid p {
+  font-size: 18pt;
+}
+
+#noticias {
+  margin-top: 8rem;
+  position: relative;
+  margin-bottom: -2rem;
+  padding-bottom: 10%;
+  height: 40%;
+  background-color: #cc995a;
+  background-position: top;
+}
+
+.noticias-titulos {
+  align-items: center;
+  padding: 20px;
+  margin-left: 0;
+  width: 100%;
+  background-color: #cc995a;
+}
+
+.img-noticias {
+  width: 35%; 
+  height: auto;
+  object-fit: contain;
+  margin-left: 5%;
+}
+
+#capacitacion {
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.capacitacion-container {
+  background-color: #ebebeb;
+  margin: 0 5rem; 
+  padding: 2rem;
+  border-radius: 30px; 
+}
+
+#logocapacitacion {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  max-width: 80%;
+}
+
+.grid-imagenes-vertical {
+  display: flex;
+  flex-direction: column;
+  gap:4rem;
+  padding: 2rem 5rem;
+  background-color: #ebebeb;
+}
+
+.imagen-item-vertical {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.imagen-item-vertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Estilo del overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 57, 73, 0.9);
+  color: #ebebeb;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.overlay-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.overlay h3 {
+  font-family: "Kabrio", 'Times New Roman', Times, serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
+.overlay p {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-right: 7.5%;
+}
+
+.imagen-item-vertical:hover .overlay {
+  opacity: 1; /* Make overlay visible on hover */
+}
+
+.imagen-item-vertical:hover img {
+  transform: scale(1.05);
+}
+
+.slideshow-container {
+  max-width: 70%;
+  position: relative;
+  margin: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 300%;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: -15%; 
+}
+
+.next {
+  right: -15%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #183949;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.titulos-creador{
+  margin: 3rem;
+  padding-top: 6rem;
+  text-align: center;
+}
+.creadores-container {
+  display: flex; 
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.creador {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 30%; 
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.creador-1 {
+  background-color: #f9f9f9; 
+}
+
+.creador-2 {
+  background-color: #f9f9f9;
+}
+
+.creador-1:hover {
+  background-color: #183949; 
+  color: white; 
+  transform: scale(1.05); 
+}
+
+.creador-2:hover {
+  background-color: #cc995a; 
+  color: white; 
+  transform: scale(1.05); 
+}
+
+.foto-creador {
+  width: 100%; 
+  border-radius: 8px;
+}
+
+footer {
+  width: 100%;
+}
+
+.fila-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #183949;
+  color: #fff;
+  align-items: flex-end;
+
+}
+
+.columna1-footer {
+  width: 30%;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.columna1-footer p{
+  font-size: 12px;
+}
+
+.columna1-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columna1-footer li {
+  margin-bottom: 10px;
+}
+
+.columna1-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.columna1-footer a:hover {
+  color: #ccc;
+}
+
+.img-footer{
+  width: 8%;
+  height: 12%;
+  margin: 3%;
+}
+
+.columna2-footer p{
+  font-size: 12px;
+  position:relative;
+
+}
