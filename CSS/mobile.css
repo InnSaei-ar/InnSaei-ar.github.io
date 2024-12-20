@@ -84,7 +84,10 @@
   .bloque2-1,
   .bloque2-2,
   .bloque3-1,
-  .bloque3-2 {
+  .bloque3-2,
+  .bloque4-1,
+  .bloque4-2 {
+    text-align: center;
     width: auto;
     position: relative;
     padding: 1rem 1rem 0rem 1rem;
