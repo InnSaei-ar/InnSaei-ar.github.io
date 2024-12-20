@@ -637,7 +637,9 @@
   .bloque2-1,
   .bloque2-2,
   .bloque3-1,
-  .bloque3-2 {
+  .bloque3-2,
+  .bloque4-1,
+  .bloque4-2 {
     display: block;
     width: auto;
     padding: 1px 1rem 0rem 1rem;
@@ -651,7 +653,9 @@
   .bloque2-1,
   .bloque2-2,
   .bloque3-1,
-  .bloque3-2 p{
+  .bloque3-2,
+  .bloque4-1,
+  .bloque4-2 p{
     padding-bottom: 1rem;
   }
 
